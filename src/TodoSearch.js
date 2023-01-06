@@ -8,11 +8,13 @@ function TodoSearch() {
   }
 
   return (
-    <input 
-      className="TodoSearch" 
-      placeholder="e.g Make the coffe" 
-      onChange={onSearchValueChange}
-      />
+    <div className="Container-TodoSearch">
+      <input 
+        className="TodoSearch" 
+        placeholder="e.g Make the coffe" 
+        onChange={onSearchValueChange}
+        />
+    </div>
   );
 }
 
