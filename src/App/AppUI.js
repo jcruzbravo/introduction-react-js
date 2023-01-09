@@ -9,6 +9,10 @@ import { Modal } from "../Modal";
 import "./App.css";
 import { TodoForm } from "../TodoForm";
 
+import { TodoError } from '../TodoError';
+import { TodoLoading } from '../TodoLoading';
+import { TodoEmpty } from '../TodoEmpty';
+
 function AppUI() {
   const { 
     error, 
@@ -26,11 +30,9 @@ function AppUI() {
       <TodoSearch />
 
       <TodoList>
-        {error && <p>Error...</p>}
-        {loading && <p>Loading...</p>}
-        {!loading && !searchedTodos.length && (
-          <p>You can create your first TODO</p>
-        )}
+        {error && <TodoError error={error}/>}
+        {loading && <TodoLoading/>}
+        {!loading && !searchedTodos.length && <TodoEmpty/>}
 
         {searchedTodos.map((todo) => (
           <TodoItem
