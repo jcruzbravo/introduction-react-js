@@ -23,7 +23,7 @@ function TodoSearch() {
     <div className="Container-TodoSearch">
       <input 
         className="TodoSearch" 
-        placeholder="e.g Make the coffe" 
+        placeholder="Search TO-DO" 
         value={searchValue}
         onChange={onSearchValueChange}
         />
